@@ -56,6 +56,32 @@ public class Topico {
         );
     }
 
+
+    public void atualizarInformacao(DadosAtualizacaoTopico dados) {
+
+        if(dados.curso()!=null){
+            this.curso=dados.curso();
+        }
+
+        if(dados.autor()!=null){
+            this.autor=dados.autor();
+        }
+
+        if(dados.titulo()!=null){
+            this.titulo=dados.titulo();
+        }
+
+        if(dados.mensagem()!=null){
+            this.mensagem=dados.mensagem();
+        }
+
+    }
+
+//    public void excluir() {
+//
+//        this.d
+//    }
+
     public Long getId() {
         return id;
     }
@@ -82,30 +108,5 @@ public class Topico {
 
     public String getCurso() {
         return curso;
-    }
-
-    public void atualizarInformacao(DadosAtualizacaoTopico dados) {
-
-        if(dados.curso()!=null){
-            this.curso=dados.curso();
-        }
-
-        if(dados.autor()!=null){
-            this.autor=dados.autor();
-        }
-
-        if(dados.titulo()!=null){
-            this.titulo=dados.titulo();
-        }
-
-        if(dados.mensagem()!=null){
-            this.mensagem=dados.mensagem();
-        }
-
-    }
-
-    public void excluir() {
-        this.estadoTopico=!this.estadoTopico;
-
     }
 }
